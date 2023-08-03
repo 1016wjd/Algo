@@ -6,9 +6,15 @@ T = int(input())
 
 for tc in range(1, T+1):
     
-    N=int(input())
+    N = int(input())
 
-    board = [[0 for _ in range(10)] for _ in range(10)]
+    board = [[0 for _ in range(10)] for _ in range(10)] #컨프리핸션 : 리스트를 한줄로 작업 
+    
+
+    # Q1 적당히 크게 만들어준 건가요?
+
+    #pprint(board)
+
     # 위와 같은 코드
     # board = []
     # for i in range(10):
@@ -30,18 +36,19 @@ for tc in range(1, T+1):
         #색칠시작
 
         for x in range(left_top_x, right_bottom_x + 1):
-            for y in range(left_top_y, right_bottom_y+1):
+            for y in range(left_top_y, right_bottom_y + 1):
                 board[x][y] += color
-        # print(board)
+        # pprint(board)
 
 
     count = 0
 
-    for x in range(board):
-        for y in range(board[0]):
+    for x in range(len(board)): # 길이로 반복문 돌리기 
+        for y in range(len(board[0])):
             if board[x][y] == 3:
                 count += 1
 
+    print(count)
     
 
 
