@@ -55,6 +55,29 @@ for row in matrix:
         if item == 5: # 10 넣으면 결과물 없음
             print('5가 있습니다')
 
+# 4*5 list로 만들기
+N, M = map(int,input().split())
+matrix = []
+
+for i in range(N):
+    numbers = list(map(int, input().split()))
+    matrix.append(numbers)
+print(matrix)
 
 
-    
+
+#아래의 코드와 같은의미
+# for row in range(len(matrix)): #매트릭스의 길이(=세로의 길이 = 행의 개수)만큼 반복
+#     for col in range(len(matrix[0])): #매트릭스의 0번 데이터의 길이 (=가로의 길이 = 열의 개수)
+
+# 행먼저
+# for row in range(N): 
+#     for col in range(M):
+#         print(matrix[row][col])
+
+# 열먼저
+for col in range(len(matrix[0])):
+    for row in range(len(matrix)):
+        print(matrix[row][col])
+
+

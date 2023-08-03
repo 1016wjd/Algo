@@ -7,7 +7,7 @@ blood_dict ={
     'AB': 0,
 
 }
-
+git 
 for blood in blood_list:
     blood_dict[blood] += 1
 # 딕셔너리의 키를 알고있다면 직접 접근해서 반복문 실행 가능
