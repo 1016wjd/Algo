@@ -1,6 +1,6 @@
-numbers = list[range(1,13)]
+numbers = list(range(1,13))
 
-# 부분집합을 구한느 배열의 길이 
+# 부분집합을 구하는 배열의 길이 
 
 n = len(numbers)
 
@@ -15,4 +15,16 @@ for i in range(1<<n): # 10000 = 2의 5승 = 32 2진수로 변환?
             temp.append(numbers[j])
 
 
-    # print(temp)
+    # print(temp)numbers = list(range(1,13))
+
+n = len(numbers)
+
+for i in range(1<<n):
+    # print(i, bin(i))
+
+    temp = []
+    for j in range(n):
+        if i & (1<<j):
+            temp.append(numbers[j])
+
+    print(temp)
