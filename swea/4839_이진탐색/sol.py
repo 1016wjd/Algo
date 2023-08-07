@@ -51,5 +51,14 @@ for tc in range(1, T+1):
             break
 
         count_b += 1
+    
+    # print(count_a, count_b)
 
-    print(count_a, count_b)
+    result = ''
+    if count_a > count_b:
+        print(f'#{tc} B')
+    elif count_a < count_b:
+        print(f'#{tc} A')
+    else:
+        print(f'#{tc} O')
+
