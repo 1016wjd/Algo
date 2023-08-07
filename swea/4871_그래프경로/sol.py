@@ -22,7 +22,7 @@ for tc in range(1, T+1):
     for line in range(E):
         start, end = list(map(int, input().split()))
         nodes[start][end] = 1
-    pprint(nodes)
+    # pprint(nodes)
 
 
     # S: 출발노드 / G : 도착노드
@@ -44,13 +44,13 @@ for tc in range(1, T+1):
     # 스택이 비어있지 않으면 계속 반복
     while len(stack):
 
-        now = stack.pop()
+        now = stack.pop() # 지우기
         check_list[now] = True
 
-        for link in range(V+1):
+        for link in range(V+1): # 한줄
             
             # now를 기준으로 연결되어있다면
-            if nodes[now][link] == 1:
+            if nodes[now][link] == 1: # 1을 고름
                 # 방문하지 않았다면 
                 if not check_list[link] :
                     # 목적지가 연결되어 있다면 
@@ -61,6 +61,3 @@ for tc in range(1, T+1):
                     stack.append(link)
 
     # print(f'#{tc} {result}')
-
-
-

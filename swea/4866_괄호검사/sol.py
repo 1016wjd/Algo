@@ -14,9 +14,9 @@ for tc in range(1, T+1):
     for char in code:
         if char == '(' or char == '{':
             stack.append(char)
-        elif char == ')' and stack[-1] == '(':
+        elif len(stack) and char == ')' and stack[-1] == '(': # 스택의 길이가 있으면 / 데이터가 있으면
             stack.pop()
-        elif char == '}' and stack[-1] == '{':
+        elif len(stack) and char == '}' and stack[-1] == '{':
             stack.pop()
         elif char == '}' or char == ')':
             stack.append(char)
