@@ -36,3 +36,5 @@ EOF
 
 echo "$problem/sol.py 파일이 생성되었습니다."
 echo "$problem/input.txt 파일이 생성되었습니다."
+
+python selen.py "$problem"

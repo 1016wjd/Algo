@@ -40,7 +40,7 @@ for tc in range(1, T+1):
     check_list[now] = True # 현재위치 방문설정
     stack.append(now) 
     
-    result = 0
+    result = 0햣 
 
 
     while len(stack):
