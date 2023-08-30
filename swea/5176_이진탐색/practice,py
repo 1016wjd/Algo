@@ -1,0 +1,33 @@
+import sys
+from pathlib import Path
+
+file_path = Path(__file__).parent
+input_path = file_path / 'input.txt'
+sys.stdin = open(input_path)
+
+T = int(input())
+
+
+def inorder(idx):
+    global count
+
+    if idx <= N:
+        
+        # 왼쪽자식
+        inorder(idx*2)
+        
+        # 현재노드에 입력
+        tree[idx] = count
+        count += 1
+
+        # 오른쪽 자식
+        inorder(idx*2 +1)
+
+
+
+
+for tc in range(1, T+1):
+    N = int(input())
+    tree = [0] * (N+1)
+    
+    inorder()

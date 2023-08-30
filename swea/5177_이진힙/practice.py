@@ -6,6 +6,8 @@ input_path = file_path / 'input.txt'
 sys.stdin = open(input_path)
 
 T = int(input())
+         
 
 for tc in range(1, T+1):
-    pass
+    N = int(input())
+    numbers = list(map(int, input().split()))
