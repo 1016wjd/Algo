@@ -70,8 +70,7 @@ for tc in range(1, T+1):
                 elif maze[nx][ny] == 3:
                     result = abs(maze[x][y]) -1
                     
-
-                    
                     break
+                print(maze[x][y])
 
     print(result)

@@ -60,4 +60,4 @@ for tc in range(1, T+1):
                     # 스택에 추가
                     stack.append(link)
 
-    # print(f'#{tc} {result}')
+    # # print(f'#{tc} {result}')

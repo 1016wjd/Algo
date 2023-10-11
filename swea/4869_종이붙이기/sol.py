@@ -19,9 +19,11 @@ for tc in range(1, T+1):
         # n-2 배열에 가로로 작은 사각형 두개 쌓거나 혹은 큰 사각형 쌓는 방법 (X2)
         # n-1 배열에 세로로 작은 사각형 쌓느 방법 하나
         temp = memo[len(memo)-2] + memo[len(memo) - 1]
+        
         memo.append(temp)
-
+    print(temp)
     print(f'#{tc} {memo[N]}')
+
 
 
 # # 블로그 풀이

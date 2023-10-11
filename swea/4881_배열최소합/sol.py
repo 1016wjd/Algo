@@ -32,6 +32,7 @@ def search(idx, visited, SUM):
             # result.pop() # 함수 종료 후 실행
             SUM -= numbers[idx][i]
             visited[i] = False
+
 for tc in range(1, T+1):
     N = int(input())
     
@@ -43,18 +44,23 @@ for tc in range(1, T+1):
         number = list(map(int, input().split()))
         numbers.append(number)
         # numbers.append(list(map(int, input().split()))) # 데이터 input 
-    result = []
+   
+    # print(numbers)
+
+    ####################################################################
+    
+    # result = []
     visited = [False] * N
 
     SUM = 0
     MIN_SUM = 100000000
 
     search(0, visited, SUM)
-    print(f'{tc} {MIN_SUM}')
+    # print(f'{tc} {MIN_SUM}')
 
     
-    # dfs(numbers)
-    # print(result)
+   
+    
 
   
 
